@@ -5,6 +5,7 @@
 	<title>Week 7 Practical</title>
 	<meta name="description" content="Week 7 Practical">
 	<link rel="stylesheet" href="styles.css">
+	<script type="text/javascript" src="contact_validate.js"></script>
 </head>
 
 <body>
@@ -12,14 +13,64 @@
 		<h1>Smith Photography</h1>
 		<nav>
 		<ul>
-		<li class="home"><a href ="index.html">Home</a></li>
-		<li class="about"><a href ="fakeabout.html">About</a></li>
-		<li class="contact"><a href ="fakecontact.html">Contact</a></li>
+		<li class="home"><a href ="../M6_CHOI_JULIE/index.html">Home</a></li>
+		<li class="about"><a href ="tbdabout.html">About</a></li>
+		<li class="contact"><a href ="contact.html">Contact</a></li>
 		</ul>
 		</nav>
 	</header>
+	<h2>Contact Us</h2>
+	<form action="contact_post.php" method="post">
+		<label for="fname">First Name:</label><br>
+		<input type="text" id="fname" name="fname"/><br>
+		<label for="lname">Last Name:</label><br>
+		<input type="text" id="lname" name="lname"/><br>
+		<label for="email">Email:</label><br>
+		<input type="text" id="email" name="email"/><br>
+		<label for="email">Phone Number:</label><br>
+		<input type="text" id="pnumber" name="pnumber/"><br>
+		
+		<h4>I prefer to be contacted by </h4>
+		<input type="radio" id="phonepref" name="contactmethod" value="phonepref">
+		<label for="yes">Phone</label><br>
+		<input type="radio" id="emailpref" name="contactmethod" value="emailpref">
+		<label for="no">Email</label><br>
+		<input type="radio" id="nopref" name="contactmethod" value="nnopref">
+		<label for="no">Doesn't Matter</label><br>
+		<br>
+
+		<h4>Session Type:</h4>
+		<input type="checkbox" id="sesstype1" name="sesstype1" value="Events">
+		<label for="sesstype1">Events</label><br>
+		<input type="checkbox" id="sesstype2" name="sesstype2" value="portraits">
+		<label for="sesstype2">Portraits</label><br>
+		<input type="checkbox" id="sesstype3" name="sesstype3" value="editorial">
+		<label for="sesstype3">Commercial</label><br>
+		<input type="checkbox" id="sesstype4" name="sesstype4" value="content">
+		<label for="sesstype4">Content Creation</label><br>
+		<input type="checkbox" id="sesstype5" name="sesstype5" value="commercial">
+		<label for="sesstype5">Other</label><br>
+
+		<h4>Desired Session Date:</h4>
+		<label for="sessdate">Desired Session Date:</label>
+		<input type="date" id="sessdate" name="sessdate"><br>
+		<br>
+		
+		<label for="comments">Message:</label><br>
+		<textarea name="comments" id="comments" placeholder="Write or ask away"></textarea>
+		<input type="submit" value="Submit">
+		<input type="reset" value="Clear">
+	</form>
 	<footer>
-		<p>| 1234 Main St. Nowhere, CA 56780 || (555)123-4567 | <a href="mailto:lorem@ipsum.com">lorem@ipsum.com</a> || This is an example site for educational purposes only. |</p>
+		<ul>
+			<li>|</li>
+			<li>1234 Main St. Nowhere, CA 56780</li>
+			<li>||</li>
+			<li>(555)123-4567 | <a href="mailto:lorem@ipsum.com">lorem@ipsum.com</a></li>
+			<li>||</li>
+			<li>This is an example site for educational purposes only.</li>
+			<li>|</li>
+		</ul>
 	</footer>
 </body>
 </html>
