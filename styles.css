@@ -1,0 +1,68 @@
+@charset "UTF-8";
+/* CSS Document */
+/*** THEME ***/
+body {
+	font-family: "Helvetica Neue", Helvetica, Arial, "sans-serif";
+	text-align: center;
+}
+h1 {
+	font-size: 70px;
+	color: teal;
+}
+h2 {
+	font-size: 30px;
+	color: teal;
+} 
+h3 {
+	font-size: 30px;
+	color: teal;
+}
+nav {
+	background-color: #292542;
+	padding: 30px;
+	list-style-type: none;
+}
+nav li {
+	display: inline;
+}
+nav li a {
+	padding: 8px;
+	color: #ffffff;
+	positon: center;
+}
+footer {
+	font-size: 15px;
+	color: white;
+	background-color: #292542;
+	padding: 30px;
+	bottom: 0;
+	clear: both;
+}
+
+/*** HOME ****/
+section {
+	width: 700px;
+	margin-left: 100px;
+	float: left;
+}
+section figure img {
+	max-width: 650px;
+}
+section p {
+	text-align: justify;
+}
+aside {
+	float: right;
+	border-width: 2px;
+	border-style: solid;
+	color: black;
+	width: 320px;
+	margin-right: 100px;
+}
+aside figure img {
+	max-width: 240px;
+	position: center;
+}
+
+
+/**CONTACT**/
