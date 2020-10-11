@@ -19,57 +19,100 @@
 		</nav>
 	</header>
 	<h2>Contact Us</h2>
-	<form method="post" action="contact_post.php" name="contact_form">
-		<label for="firstname">First Name:</label>
-		<input type="text" id="firstname" name="firstname"/>
-		<label for="lastname">Last Name:</label>
-		<input type="text" id="lastname" name="lastname"/><br>
-		<label for="email">Email:</label>
-		<input type="text" id="email" name="email"/>
-		<label for="phone">Phone Number:</label>
-		<input type="text" id="phone" name="phone"/><br>
-		
-		<h4>Preferred Contact Method:</h4>
-		<input type="radio" id="phonepref" name="contactmethod" value="phonepref">
-		<label for="yes">Phone</label>
-		<input type="radio" id="emailpref" name="contactmethod" value="emailpref">
-		<label for="no">Email</label>
-		<input type="radio" id="nopref" name="contactmethod" value="nnopref">
-		<label for="no">Doesn't Matter</label><br>
-		<hr>
-
-		<label for="sessiontype">Session Type:</label>
-		<select id="sessiontype" name="sessiontype">
-			<option value="events">Events</option>
-			<option value="portraits">Portraits</option>
-			<option value="commercial">Commercial</option>
-			<option value="content">Content Creation</option>
-			<option value="other">Other</option>
-		</select>
-		<br>
-		<label for="sessdate">Desired Session Date:</label>
-		<input type="date" id="sessdate" name="sessdate"><br>
-		<br>
-		<hr>
-		<h4>My message contains:</h4>
-		<input type="checkbox" id="messagetype1" name="messagetype1" value="Details">
-		<label for="messagetype1">Share Details</label>
-		<input type="checkbox" id="messagetype2" name="messagetype2" value="Inquiries">
-		<label for="messagetype2">Specific Inquiries</label>
-		<input type="checkbox" id="messagetype3" name="messagetype3" value="Questions">
-		<label for="messagetype3">General Questions</label>
-		<input type="checkbox" id="messagetype4" name="messagetype4" value="Feedback">
-		<label for="messagetype4">Feedback</label>
-		<input type="checkbox" id="messagetype5" name="messagetype5" value="Issues">
-		<label for="messagetype5">Report an Issue</label>
-		<input type="checkbox" id="messagetype6" name="messagetype6" value="Other">
-		<label for="messagetype6">Other</label><br>
-		<br>
-		<label for="comments">Message:</label><br>
-		<textarea name="comments" id="comments" placeholder="Add additional details or questions here"></textarea><br>
-		<br>
-		<input type="submit" value="Submit">
-		<input type="reset" value="Clear">
+	<form method="post" action="action_page.php" name="contact_form">
+		<fieldset>
+		<legend>Contact Information</legend>
+			<div class="col-40">
+				<label class="label-width" for="fname">First Name:</label>
+			</div>
+			<div class="col-60">
+				<input type="text" id="fname" name="fname"/>
+			</div>
+			<br>
+			<div class="col-40">
+				<label class="label-width" for="lname">Last Name:</label>
+			</div>
+			<div class="col-60">
+				<input type="text" id="lname" name="lname"/>
+			</div>
+			<br>
+			<div class="col-40">
+				<label class="label-width" for="email">Email:</label>
+			</div>
+			<div class="col-60">
+				<input type="text" id="email" name="email"/>
+			</div>
+			<br>
+			<div class="col-40">
+				<label class="label-width" for="phone">Phone Number:</label>
+			</div>
+			<div class="col-60">
+				<input type="text" id="phone" name="phone"/>
+			</div>
+			<br>
+			<div class="col-40">
+				<label class="label-width" for="contactmethod">Preferred Contact Method:</label>
+			</div>
+			<div class="col-60">
+			<input type="radio" id="phonepref" name="contactmethod" value="phonepref">
+			<label for="yes">Phone</label>
+			<input type="radio" id="emailpref" name="contactmethod" value="emailpref">
+			<label for="no">Email</label>
+			<input type="radio" id="nopref" name="contactmethod" value="nnopref">
+			<label for="no">Doesn't Matter</label>
+			</div>
+		</fieldset>
+		<fieldset>
+		<legend>Session Information</legend>
+			<div class="col-40">
+				<label class="label-width" for="sessiontype">Session Type:</label>
+			</div>
+			<div class="col-60">
+			<select id="sessiontype" name="sessiontype">
+				<option value="events">Events</option>
+				<option value="portraits">Portraits</option>
+				<option value="commercial">Commercial</option>
+				<option value="content">Content Creation</option>
+				<option value="other">Other</option>
+			</select>
+			</div>
+			<br>
+			<div class="col-40">
+				<label class="label-width" for="sessdate">Desired Session Date:</label>
+			</div>
+			<div class="col-60">
+				<input type="date" id="sessdate" name="sessdate"><br>
+			</div>
+		</fieldset>	
+		<fieldset>
+		<legend>Message</legend>
+			<div class="col-40">
+				<label class="label-width" for="messagetype">Message Categories:</label>
+			</div>
+			<div class="col-60">
+			<input type="checkbox" id="messagetype1" name="messagetype1" value="Details">
+			<label for="messagetype1">Share Details</label>
+			<input type="checkbox" id="messagetype2" name="messagetype2" value="Inquiries">
+			<label for="messagetype2">Specific Inquiries</label><br>
+			<input type="checkbox" id="messagetype3" name="messagetype3" value="Questions">
+			<label for="messagetype3">General Questions</label>
+			<input type="checkbox" id="messagetype4" name="messagetype4" value="Feedback">
+			<label for="messagetype4">Feedback</label><br>
+			<input type="checkbox" id="messagetype5" name="messagetype5" value="Issues">
+			<label for="messagetype5">Report an Issue</label>
+			<input type="checkbox" id="messagetype6" name="messagetype6" value="Other">
+			<label for="messagetype6">Other</label>
+			</div>
+			<div class="col-40">
+				<label class="label-width" for="comments">Message:</label>
+			</div>
+			<div class="col-60">
+			<textarea name="comments" id="comments" placeholder="Add additional details or questions here"></textarea></div>
+			<br>
+			<br>
+			<input type="submit" value="Submit">
+			<input type="reset" value="Clear">
+		</fieldset>
 	</form>
 	<footer>
 		<ul>
