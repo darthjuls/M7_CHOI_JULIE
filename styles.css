@@ -47,7 +47,7 @@ footer {
 }
 footer li {
 	display: inline;
-	padding: 6px;
+	padding: 5px;
 }
 footer li a {
 	color: #ffffff;
@@ -85,4 +85,56 @@ figcaption {
 }
 
 
-/**CONTACT**/
+/**CONTACT FORM**/
+form {
+	width: 700px;
+	margin-left: 0;
+	margin-right: 0;
+	display: inline-block;
+	margin-bottom: 50px;
+}
+.row-margin {
+	border-width: 3px;
+	border-style: solid;
+	color: black;
+  	padding: 20px;
+	text-align: left;
+	width: 660px;
+	margin-left: 0;
+	margin-right: 0;
+}
+.col-40 {
+  	float: left;
+  	width: 240px;
+  	margin: 5px;
+}
+.col-60 {
+  	float: left;
+  	width: 360px;
+ 	margin: 5px;
+}
+.row-margin:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+input[type=text] {
+  	width: 375px;
+	height: 20px;
+  	padding: 5px;
+  	border: 1px solid #292542;
+  	resize: vertical;
+}
+textarea {
+	width: 375px;
+	padding: 5px;
+  	border: 1px solid #292542;
+  	resize: vertical;
+	height: 100px;
+}
+#sessiontype, #sessiondate, #phone {
+	width: 275px;
+	height: 27px;
+	border: 1px solid #292542;
+}
+

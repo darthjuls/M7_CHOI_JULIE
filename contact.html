@@ -22,36 +22,37 @@
 	<form method="post" action="action_page.php" name="contact_form">
 		<fieldset>
 		<legend>Contact Information</legend>
+		<div class="row-margin">
 			<div class="col-40">
 				<label class="label-width" for="fname">First Name:</label>
 			</div>
 			<div class="col-60">
-				<input type="text" id="fname" name="fname"/>
+				<input type="text" id="fname" name="req_fname" placeholder="First name is required to submit your request."/>
 			</div>
 			<br>
 			<div class="col-40">
 				<label class="label-width" for="lname">Last Name:</label>
 			</div>
 			<div class="col-60">
-				<input type="text" id="lname" name="lname"/>
+				<input type="text" id="lname" name="req_lname" placeholder="Last name is required to submit your request."/>
 			</div>
 			<br>
 			<div class="col-40">
-				<label class="label-width" for="email">Email:</label>
+				<label class="label-width" for="req_email">Email:</label>
 			</div>
 			<div class="col-60">
-				<input type="text" id="email" name="email"/>
+				<input type="text" id="email" name="email" placeholder="Email is required to submit your request."/>
 			</div>
 			<br>
 			<div class="col-40">
 				<label class="label-width" for="phone">Phone Number:</label>
 			</div>
 			<div class="col-60">
-				<input type="text" id="phone" name="phone"/>
+				<input type="tel" id="phone" name="phone"  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="999-999-9999"/>
 			</div>
 			<br>
 			<div class="col-40">
-				<label class="label-width" for="contactmethod">Preferred Contact Method:</label>
+				<label class="label-width" for="contactmethod" >Preferred Contact Method:</label>
 			</div>
 			<div class="col-60">
 			<input type="radio" id="phonepref" name="contactmethod" value="phonepref">
@@ -61,9 +62,11 @@
 			<input type="radio" id="nopref" name="contactmethod" value="nnopref">
 			<label for="no">Doesn't Matter</label>
 			</div>
+		</div>
 		</fieldset>
 		<fieldset>
 		<legend>Session Information</legend>
+		<div class="row-margin">
 			<div class="col-40">
 				<label class="label-width" for="sessiontype">Session Type:</label>
 			</div>
@@ -78,28 +81,30 @@
 			</div>
 			<br>
 			<div class="col-40">
-				<label class="label-width" for="sessdate">Desired Session Date:</label>
+				<label class="label-width" for="sessiondate">Desired Session Date:</label>
 			</div>
 			<div class="col-60">
-				<input type="date" id="sessdate" name="sessdate"><br>
+				<input type="date" id="sessiondate" name="sessiondate"><br>
 			</div>
+		</div>
 		</fieldset>	
 		<fieldset>
 		<legend>Message</legend>
+		<div class="row-margin">
 			<div class="col-40">
 				<label class="label-width" for="messagetype">Message Categories:</label>
 			</div>
 			<div class="col-60">
 			<input type="checkbox" id="messagetype1" name="messagetype1" value="Details">
-			<label for="messagetype1">Share Details</label>
+			<label for="messagetype1">Share Details</label><br>
 			<input type="checkbox" id="messagetype2" name="messagetype2" value="Inquiries">
 			<label for="messagetype2">Specific Inquiries</label><br>
 			<input type="checkbox" id="messagetype3" name="messagetype3" value="Questions">
-			<label for="messagetype3">General Questions</label>
+			<label for="messagetype3">General Questions</label><br>
 			<input type="checkbox" id="messagetype4" name="messagetype4" value="Feedback">
 			<label for="messagetype4">Feedback</label><br>
 			<input type="checkbox" id="messagetype5" name="messagetype5" value="Issues">
-			<label for="messagetype5">Report an Issue</label>
+			<label for="messagetype5">Report an Issue</label><br>
 			<input type="checkbox" id="messagetype6" name="messagetype6" value="Other">
 			<label for="messagetype6">Other</label>
 			</div>
@@ -107,11 +112,13 @@
 				<label class="label-width" for="comments">Message:</label>
 			</div>
 			<div class="col-60">
-			<textarea name="comments" id="comments" placeholder="Add additional details or questions here"></textarea></div>
+			<textarea name="comments" id="comments" placeholder="Add additional details or questions here"></textarea>
 			<br>
 			<br>
 			<input type="submit" value="Submit">
 			<input type="reset" value="Clear">
+			</div>
+		</div>
 		</fieldset>
 	</form>
 	<footer>
