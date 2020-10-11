@@ -5,7 +5,6 @@
 	<title>Week 7 Practical</title>
 	<meta name="description" content="Week 7 Practical">
 	<link rel="stylesheet" href="styles.css">
-	<script type="text/javascript" src="contact_validate.js"></script>
 </head>
 
 <body>
@@ -20,44 +19,55 @@
 		</nav>
 	</header>
 	<h2>Contact Us</h2>
-	<form action="contact_post.php" method="post">
-		<label for="fname">First Name:</label><br>
-		<input type="text" id="fname" name="fname"/><br>
-		<label for="lname">Last Name:</label><br>
-		<input type="text" id="lname" name="lname"/><br>
-		<label for="email">Email:</label><br>
-		<input type="text" id="email" name="email"/><br>
-		<label for="email">Phone Number:</label><br>
-		<input type="text" id="pnumber" name="pnumber/"><br>
+	<form method="post" action="contact_post.php" name="contact_form">
+		<label for="firstname">First Name:</label>
+		<input type="text" id="firstname" name="firstname"/>
+		<label for="lastname">Last Name:</label>
+		<input type="text" id="lastname" name="lastname"/><br>
+		<label for="email">Email:</label>
+		<input type="text" id="email" name="email"/>
+		<label for="phone">Phone Number:</label>
+		<input type="text" id="phone" name="phone"/><br>
 		
-		<h4>I prefer to be contacted by </h4>
+		<h4>Preferred Contact Method:</h4>
 		<input type="radio" id="phonepref" name="contactmethod" value="phonepref">
-		<label for="yes">Phone</label><br>
+		<label for="yes">Phone</label>
 		<input type="radio" id="emailpref" name="contactmethod" value="emailpref">
-		<label for="no">Email</label><br>
+		<label for="no">Email</label>
 		<input type="radio" id="nopref" name="contactmethod" value="nnopref">
 		<label for="no">Doesn't Matter</label><br>
+		<hr>
+
+		<label for="sessiontype">Session Type:</label>
+		<select id="sessiontype" name="sessiontype">
+			<option value="events">Events</option>
+			<option value="portraits">Portraits</option>
+			<option value="commercial">Commercial</option>
+			<option value="content">Content Creation</option>
+			<option value="other">Other</option>
+		</select>
 		<br>
-
-		<h4>Session Type:</h4>
-		<input type="checkbox" id="sesstype1" name="sesstype1" value="Events">
-		<label for="sesstype1">Events</label><br>
-		<input type="checkbox" id="sesstype2" name="sesstype2" value="portraits">
-		<label for="sesstype2">Portraits</label><br>
-		<input type="checkbox" id="sesstype3" name="sesstype3" value="editorial">
-		<label for="sesstype3">Commercial</label><br>
-		<input type="checkbox" id="sesstype4" name="sesstype4" value="content">
-		<label for="sesstype4">Content Creation</label><br>
-		<input type="checkbox" id="sesstype5" name="sesstype5" value="commercial">
-		<label for="sesstype5">Other</label><br>
-
-		<h4>Desired Session Date:</h4>
 		<label for="sessdate">Desired Session Date:</label>
 		<input type="date" id="sessdate" name="sessdate"><br>
 		<br>
-		
+		<hr>
+		<h4>My message contains:</h4>
+		<input type="checkbox" id="messagetype1" name="messagetype1" value="Details">
+		<label for="messagetype1">Share Details</label>
+		<input type="checkbox" id="messagetype2" name="messagetype2" value="Inquiries">
+		<label for="messagetype2">Specific Inquiries</label>
+		<input type="checkbox" id="messagetype3" name="messagetype3" value="Questions">
+		<label for="messagetype3">General Questions</label>
+		<input type="checkbox" id="messagetype4" name="messagetype4" value="Feedback">
+		<label for="messagetype4">Feedback</label>
+		<input type="checkbox" id="messagetype5" name="messagetype5" value="Issues">
+		<label for="messagetype5">Report an Issue</label>
+		<input type="checkbox" id="messagetype6" name="messagetype6" value="Other">
+		<label for="messagetype6">Other</label><br>
+		<br>
 		<label for="comments">Message:</label><br>
-		<textarea name="comments" id="comments" placeholder="Write or ask away"></textarea>
+		<textarea name="comments" id="comments" placeholder="Add additional details or questions here"></textarea><br>
+		<br>
 		<input type="submit" value="Submit">
 		<input type="reset" value="Clear">
 	</form>
