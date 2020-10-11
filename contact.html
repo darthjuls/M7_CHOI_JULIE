@@ -5,6 +5,7 @@
 	<title>Week 7 Practical</title>
 	<meta name="description" content="Week 7 Practical">
 	<link rel="stylesheet" href="styles.css">
+	<script type="text/javascript" src="form_validate.js"></script>
 </head>
 
 <body>
@@ -19,7 +20,7 @@
 		</nav>
 	</header>
 	<h2>Contact Us</h2>
-	<form method="post" action="action_page.php" name="contact_form">
+	<form id="test_form" name="test_form" method="post" action="form.php" onsubmit="return validateForm(this)">
 		<fieldset>
 		<legend>Contact Information</legend>
 		<div class="row-margin">
